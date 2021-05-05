@@ -1,12 +1,12 @@
 <?php
 
 
-class Page
+class Partner
 {
     private $db;
 
     /**
-     * Page constructor.
+     * Partner constructor.
      */
     public function __construct()
     {
