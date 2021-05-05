@@ -7,7 +7,7 @@ define('APPROOT', dirname(dirname(__FILE__)));
 define('URLROOT', 'http://' . $_SERVER['HTTP_HOST'] . '/' . PROJECT_NAME);
 
 //db params
-define('DB_HOST', 'host');
-define('DB_USER', 'user');
-define('DB_PASS', 'pass');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'kpr');
