@@ -1,4 +1,8 @@
 <?php require_once APPROOT . '/views/inc/header.php'; ?>
+<?php
+echo '<pre>';
+print_r($data);
+?>
     <h1><?php echo $data['title']; ?></h1>
     <!-- table -->
     <table class="table table-striped">
