@@ -44,9 +44,16 @@ class User
         }
     }
 
-    public function log_in($data)
+    public function login($email, $password)
     {
-        $this->db->bind('email', $data['email']);
-        $this->db->bind('password', $data['password']);
+        $this->db->query('SELECT * FROM users WHERE email=:email');
+        $this->db->bind(':email', $email);
+        $user = $this->db->getOne();
+        $hashedPassword = $user->password;
+        if (password_verify($password, $hashedPassword)) {
+            return $user;
+        } else {
+            return false;
+        }
     }
 }
