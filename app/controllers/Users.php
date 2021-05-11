@@ -48,7 +48,14 @@ class Users extends Controller
             } else if ($data['password'] !== $data['confirm_password']) {
                 $data['confirm_password_err'] = 'Password does not match the actual password you fucking retard';
             }
-            print_r($data);
+            if (empty($data['name_err']) and empty($data['email_err']) and empty($data['password_err']) and empty($data['confirm_password_err'])) {
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                if ($this->usersModel->register($data)) {
+                    header('Location: ' . URLROOT . '/' . 'users/login');
+                } else {
+                    die('somtin wong?');
+                }
+            }
         } else {
             $data = array(
                 'name' => '',
