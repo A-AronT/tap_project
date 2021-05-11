@@ -43,4 +43,10 @@ class User
             return false;
         }
     }
+
+    public function log_in($data)
+    {
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('password', $data['password']);
+    }
 }
