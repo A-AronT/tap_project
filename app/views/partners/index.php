@@ -12,6 +12,7 @@
             <th scope="col">Telefon</th>
             <th scope="col">Tegevusala</th>
             <th scope="col">Asukoht</th>
+            <th scope="col">Detailne info</th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 <td><?php echo $partner->phone; ?></td>
                 <td><?php echo $partner->partner_activity; ?></td>
                 <td><?php echo $partner->location; ?></td>
+                <td><a href="<?php echo URLROOT . '/partners/show/' . $partner->partner_id; ?>">vaata lähemalt</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

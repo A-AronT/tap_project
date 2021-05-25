@@ -19,4 +19,12 @@ class Partner
         $result = $this->db->getAll();
         return $result;
     }
+
+    public function getPartner($id)
+    {
+        $this->db->query('SELECT * FROM partners WHERE id=:id');
+        $this->db->bind('id', $id);
+        $result = $this->db->getOne();
+        return $result;
+    }
 }
