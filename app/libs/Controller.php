@@ -19,4 +19,9 @@ class Controller
             die('Views ' . $view . ' does not exist');
         }
     }
+
+    public function add()
+    {
+        $this->view('activities/add', $data);
+    }
 }
