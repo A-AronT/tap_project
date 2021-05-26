@@ -26,8 +26,10 @@ class Partners extends Controller
     public function show($id)
     {
         $partner = $this->partnerModel->getPartner($id);
+        $partner_activity = $this->partnerModel->getPartnerActivity($id);
         $data = array(
-            'partner' => $partner
+            'partner' => $partner,
+            'activity' => $partner_activity
         );
         $this->view('partners/show', $data);
     }
