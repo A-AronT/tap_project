@@ -1,6 +1,5 @@
 <?php require_once APPROOT . '/views/inc/header.php'; ?>
     <h1><?php echo $data['activity']->name; ?></h1>
-
     <!-- table -->
     <table class="table table-striped">
         <thead>

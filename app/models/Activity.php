@@ -55,4 +55,5 @@ class Activity
             return false;
         }
     }
+
 }

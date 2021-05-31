@@ -56,4 +56,5 @@ class Activities extends Controller
             $this->view('activities/add', $data);
         }
     }
+
 }
